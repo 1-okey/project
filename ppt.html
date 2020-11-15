@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1OKEY: 단축키 마스터</title>
+
+	<style type="text/css">
+
+		/*기본 설정*/
+		:root {
+			--word-color:#1E438F;  
+			--excel-color:#387A47; 
+			--ppt-color:#C45A3B;  
+			--han-color:#4A9CD9;}
+
+		/*폰트 설정*/
+		@font-face {font-family: 'GmarketSansBold';  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff'); font-weight: normal; font-style: normal;}
+		@font-face {font-family: 'GmarketSansMedium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');  font-weight: normal; font-style: normal; }
+		@font-face {font-family: 'GmarketSansLight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff'); font-weight: normal;  font-style: normal; }
+		@font-face { font-family: 'BCcardB';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.1/BCcardB.woff') format('woff');font-weight: normal; font-style: normal;}
+
+
+		*{margin:0; padding:0;}
+
+		header{
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 100;
+			width: 57vw;}
+
+		.main{
+			height:100vh;
+			width:100vw;
+			float: right;}
+
+		/*로고*/
+		.logo_b{width: 127px;
+				position: absolute;
+				margin-left: 15%;
+				margin-top: 5%;}
+
+		/*카테고리 네비게이션 */	
+		.nav{display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-top: 5%;
+			width: 60px;
+			margin-left:83%;}
+
+		.nav li{margin: 0; padding: 0; list-style: none;}
+
+		.nav a{
+			display: block;
+			text-decoration: none;
+			color: #1E438F;
+			color: var(--ppt-color);}
+
+		/*카테고리 라인*/
+		hr.line{position: absolute;
+				width: 10%;
+				float: right;
+				color: black;
+				border: thin solid black;
+				position: relative;
+				transform: translate(0px,-98px);}
+
+		/*카테고리 클릭 */
+		.nav .click{font-family: 'GmarketSansBold';
+					font-size: 36px; font-weight: bold;
+					color: var(--ppt-color);
+					line-height: 60px;}
+
+		.nav .click:hover{text-decoration: underline;
+						text-underline-position: under;
+						transition: all 0.5s ease-in;}
+
+		.nav .un_click:hover{font-size:30px;}
+
+		.nav .un_click{
+				font-family: 'GmarketSansMedium';
+				font-size: 24px;
+				font-weight: bold;
+				color: #787878;
+				line-height: 60px;}	
+
+		/*메인 이미지*/
+		.main_img{
+			height:100vh;
+			width: 43vw;
+			float: right;
+
+			background-image: url(https://i.ibb.co/HFH7YBy/img-ppt.png);
+			background-position: center;
+			background-size: 100%;
+
+			animation: changecolor 4s infinite;}
+
+		 @keyframes changecolor{
+		 	0%{background-color: #F19473;} 
+		 	30%{background-color: var(--ppt-color);}
+		 	60%{background-color: #B6482A;}
+		 	100%{background-color: #F19473;} 
+		 }
+
+		 .main_info{
+		 	color: #fff;
+		 	font-family: 'BCcardB';
+		 	font-size: 45px;
+		 	line-height: 1.5;
+
+		 	margin-top: 85%;
+		 	margin-left: 8%;
+			}
+
+		/*클릭 페이지 설명*/
+		 .click_pg{
+		 		position: absolute;
+		 		height: 17vh;
+		 		width: 36vW;
+		 		float: left;
+		 		display: flex;
+		 		flex-direction: column;
+		 		margin-top: 28%;
+		 		margin-left: 9.8%;}
+		 .click_pg .move_pg{
+		 		display: flex;
+		 		align-items: center;
+		 		float: left;
+		 		text-decoration: none;
+		 		width: 100%;
+		 		color: var(--ppt-color);
+		 		font-family: 'GmarketSansBold';}
+		 .click_pg .move_pg h2{
+		 		font-weight: bold;
+		 		position: relative;
+		 		display: flex;
+		 		float: left;
+		 		font-size: 45px;
+		 		text-decoration: none;}
+		 .click_pg .move_pg img{
+		 		position: relative;
+		 		display: flex;
+		 		float: right;
+		 		padding-left: 5%;
+		 		height: 35%;}
+		 .click_pg .cont{
+		 		display: flex;
+		 		position: relative;
+		 		font-family: 'GmarketSansMedium';
+		 		font-style: normal;
+		 		font-weight: 500;
+		 		font-size: 20px;
+		 		
+		 		align-items: center;
+		 		color: #3C3C3C;
+
+		 		line-height: 1.8;
+		 		margin-top: 5%;}
+
+		 /*메뉴 아이콘*/		
+		 .li_icon .icon{
+		 		padding-right: 3%;
+		 		margin-top: 8%;
+		 		width:100px;
+		 		display: inline-block;}
+
+		 .li_icon .icon:first-child{margin-left: 0;}
+
+		 .li_icon img{display: inline-block;text-align: center;}
+
+
+	</style>
+</head>
+
+<body>
+	<header>
+		<a href="word.html" class="logo_b"><img src="https://i.postimg.cc/tC33vtbq/Kakao-Talk-20201025-174827056-04.png"></a>
+
+		<ul class="nav">
+			<li><a href="word.html" class="un_click" >W </a></li>
+			<li><a href="excel.html" class="un_click" >E</a></li>
+			<li><a href="ppt.html" class="click" >P </a></li>
+			<li><a href="han.html" class="un_click" >H </a></li>
+		</ul>
+
+		<hr class="line">
+	</header>
+
+	<a href="ppt1.html">
+	<div class="main">
+		<div class="main_img">
+		<h3 class="main_info">파워포인트를 이용하는<br>	사람을 위한<br>꿀-단축키 소개</h3>
+		</div>
+	</a>
+	
+	<div class="click_pg">
+		<a href="ppt1.html" class="move_pg">
+			<h2>PPT: 파워포인트</h2>
+			<img src="https://i.postimg.cc/sxw31rk7/icon-move.png">
+		</a>
+
+		<h3 class="cont">PPT에서 유용하고 PT마스터가 가능한 단축키를<br>빠르고 쉽게 배울 수 있습니다.</h3>
+
+		<div class="li_icon">
+		<a href="ppt2.html" class="icon"><img src="./img/icon_ppt_orange2.png"></a>
+		<a href="ppt3.html" class="icon"><img src="./img/icon_ppt_orange3.png"></a>
+		<a href="ppt4.html" class="icon"><img src="./img/icon_ppt_orange4.png"></a>
+	</div>
+	</div>
+
+	
+	</div>
+	
+</body>
+</html>
