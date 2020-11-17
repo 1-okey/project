@@ -116,14 +116,14 @@
 
 		/*클릭 페이지 설명*/
 		 .click_pg{
+		 	margin-left: 9.8%;
 		 		position: absolute;
 		 		height: 17vh;
 		 		width: 36vW;
 		 		float: left;
 		 		display: flex;
 		 		flex-direction: column;
-		 		margin-top: 28%;
-		 		margin-left: 9.8%;}
+		 		margin-top: 28%;}
 		 .click_pg .move_pg{
 		 		display: flex;
 		 		align-items: center;
@@ -133,6 +133,7 @@
 		 		color: var(--excel-color);
 		 		font-family: 'GmarketSansBold';}
 		 .click_pg .move_pg h2{
+		 		
 		 		font-weight: bold;
 		 		position: relative;
 		 		display: flex;
@@ -159,7 +160,9 @@
 		 		line-height: 1.8;
 		 		margin-top: 5%;}
 
-		 /*메뉴 아이콘*/		
+		 /*메뉴 아이콘*/	
+		 .li_icon{}
+			
 		 .li_icon .icon{
 		 		padding-right: 3%;
 		 		margin-top: 8%;
@@ -176,8 +179,14 @@
 		 @media (max-width: 767px) {
 
 		 header{
+		 	z-index: 100;
 		 	position: absolute;
 			width: 100vw;}
+
+		.main{width: 100vw;
+			float: left;
+			margin: 0;
+			padding: 0;}
 
 		.logo_b{position: absolute;
 				margin-left: 10%;
@@ -191,19 +200,19 @@
 			align-items: center;
 			padding-top: 10%;
 			width: 60px;
-			margin-left:55%;}
+			margin-left:55%;
+			margin-right: 0%;}
 
 		.nav li{margin: 0; padding: 0; list-style: none;
 			margin-right:30px; }
 
 		.nav a{
 			text-decoration: none;
-			color: #1E438F;
+			color: #387A47; 
 			color: var(--excel-color);}
 
 		.main_img{
-
-		 	margin-top: 110%;
+		 	margin-top: 500px;
 			height: 250px;
 			width: 100vw;}
 
@@ -221,22 +230,34 @@
 		 	margin-left: 8%;
 			}
 
+				hr.line{position: absolute;
+				width: 0%;
+				float: right;
+				color: black;
+				border: thin solid black;
+				position: relative;
+				transform: translate(0px,0px);}
+
 		/*클릭 페이지 설명*/
 		 .click_pg{
+		 		padding: 0;
 		 		position: absolute;
 		 		height: 17vh;
 		 		width: 100vW;
 		 		float: left;
 		 		display: flex;
 		 		flex-direction: column;
-		 		margin-top: 45%;
-		 		margin-left: 9.8%;}
+		 		margin-top: 35%;
+		 		margin-left: 0%;}
+
 		 .click_pg .move_pg{
+		 		margin-left: 0%;
+		 		padding: 0;
 		 		display: flex;
 		 		align-items: center;
 		 		float: left;
 		 		text-decoration: none;
-		 		width: 100%;
+		 		width: 100vw;
 		 		color: var(--excel-color);
 		 		font-family: 'GmarketSansBold';}
 		 .click_pg .move_pg h2{
@@ -245,7 +266,8 @@
 		 		display: flex;
 		 		float: left;
 		 		font-size: 32px;
-		 		text-decoration: none;}
+		 		text-decoration: none;
+		 		padding-left: 9%}
 		 .click_pg .move_pg img{
 		 		position: relative;
 		 		display: flex;
@@ -253,21 +275,24 @@
 		 		padding-left: 5%;
 		 		height: 35%;}
 		 .click_pg .cont{
+		 		padding-left: 9%;
 		 		display: flex;
 		 		position: relative;
 		 		font-family: 'GmarketSansMedium';
 		 		font-style: normal;
 		 		font-weight: 500;
-		 		font-size: 20px;
-		 		
-		 		align-items: center;
+		 		font-size: 19px;
 		 		color: #3C3C3C;
-
+		 		
 		 		line-height: 1.8;
 		 		margin-top: 5%;}
 
-		 /*메뉴 아이콘*/		
+		 /*메뉴 아이콘*/	
+		 .li_icon{
+		 	padding-left: 9%;
+		 }	
 		 .li_icon .icon{
+		 	
 		 		padding-right: 3%;
 		 		margin-top: 8%;
 		 		width:100px;
@@ -275,8 +300,11 @@
 
 		 .li_icon .icon:first-child{margin-left: 0;}
 
-		 .li_icon img{display: inline-block;text-align: center;}
+		 .li_icon img{
+		 	display: inline-block;
+		 	text-align: center;}
 		 }
+
 
 
 	</style>
@@ -301,6 +329,7 @@
 		<div class="main_img">
 		<h3 class="main_info">엑셀을 이용하는 사람을 위한<br>고-급진 단축키 소개</h3>
 		</div>
+		</div>
 	</a>
 	
 	<div class="click_pg">
@@ -318,8 +347,6 @@
 	</div>
 	</div>
 
-	
-	</div>
 	
 </body>
 </html>
