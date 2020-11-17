@@ -34,13 +34,15 @@
 			float: right;}
 
 		/*로고*/
-		.logo_b{width: 127px;
-				position: absolute;
+		.logo_b{position: absolute;
 				margin-left: 15%;
 				margin-top: 5%;}
 
+		.logo_b img{width: 127px;}
+
 		/*카테고리 네비게이션 */	
-		.nav{display: flex;
+		.nav{
+			display: flex;
 			flex-direction: column;
 			align-items: center;
 			padding-top: 5%;
@@ -62,7 +64,7 @@
 				color: black;
 				border: thin solid black;
 				position: relative;
-				transform: translate(0px,-98px);}
+				transform: translate(0px,-215px);}
 
 		/*카테고리 클릭 */
 		.nav .click{font-family: 'GmarketSansBold';
@@ -99,8 +101,7 @@
 		 	0%{background-color: #F19473;} 
 		 	30%{background-color: var(--ppt-color);}
 		 	60%{background-color: #B6482A;}
-		 	100%{background-color: #F19473;} 
-		 }
+		 	100%{background-color: #F19473;}}
 
 		 .main_info{
 		 	color: #fff;
@@ -108,7 +109,7 @@
 		 	font-size: 45px;
 		 	line-height: 1.5;
 
-		 	margin-top: 85%;
+		 	margin-top: 93%;
 		 	margin-left: 8%;
 			}
 
@@ -169,12 +170,120 @@
 		 .li_icon img{display: inline-block;text-align: center;}
 
 
+
+
+		 @media (max-width: 767px) {
+
+		 header{
+		 	position: absolute;
+			width: 100vw;}
+
+		.logo_b{position: absolute;
+				margin-left: 10%;
+				margin-top: 5%;}
+
+		.logo_b img{width: 100px;}
+
+		.nav{
+			position: absolute;
+			flex-direction: row;
+			align-items: center;
+			padding-top: 10%;
+			width: 60px;
+			margin-left:55%;}
+
+		.nav li{margin: 0; padding: 0; list-style: none;
+			margin-right:30px; }
+
+		.nav a{
+			text-decoration: none;
+			color: #1E438F;
+			color: var(--ppt-color);}
+
+		.main_img{
+
+		 	margin-top: 110%;
+			height: 250px;
+			width: 100vw;}
+
+		 .main_info{
+		 	position: absolute;
+
+		 	color: #fff;
+		 	font-family: 'BCcardB';
+		 	font-size: 45px;
+		 	line-height: 1.5;
+
+		 	height: 250px;
+
+		 	margin-top: 25px;
+		 	margin-left: 8%;
+			}
+
+		/*클릭 페이지 설명*/
+		 .click_pg{
+		 		position: absolute;
+		 		height: 17vh;
+		 		width: 100vW;
+		 		float: left;
+		 		display: flex;
+		 		flex-direction: column;
+		 		margin-top: 45%;
+		 		margin-left: 9.8%;}
+		 .click_pg .move_pg{
+		 		display: flex;
+		 		align-items: center;
+		 		float: left;
+		 		text-decoration: none;
+		 		width: 100%;
+		 		color: var(--ppt-color);
+		 		font-family: 'GmarketSansBold';}
+		 .click_pg .move_pg h2{
+		 		font-weight: bold;
+		 		position: relative;
+		 		display: flex;
+		 		float: left;
+		 		font-size: 45px;
+		 		text-decoration: none;}
+		 .click_pg .move_pg img{
+		 		position: relative;
+		 		display: flex;
+		 		float: right;
+		 		padding-left: 5%;
+		 		height: 35%;}
+		 .click_pg .cont{
+		 		display: flex;
+		 		position: relative;
+		 		font-family: 'GmarketSansMedium';
+		 		font-style: normal;
+		 		font-weight: 500;
+		 		font-size: 20px;
+		 		
+		 		align-items: center;
+		 		color: #3C3C3C;
+
+		 		line-height: 1.8;
+		 		margin-top: 5%;}
+
+		 /*메뉴 아이콘*/		
+		 .li_icon .icon{
+		 		padding-right: 3%;
+		 		margin-top: 8%;
+		 		width:100px;
+		 		display: inline-block;}
+
+		 .li_icon .icon:first-child{margin-left: 0;}
+
+		 .li_icon img{display: inline-block;text-align: center;}
+		 }
+
+
 	</style>
 </head>
 
 <body>
 	<header>
-		<a href="word.html" class="logo_b"><img src="https://i.postimg.cc/tC33vtbq/Kakao-Talk-20201025-174827056-04.png"></a>
+		<a href="ppt.html" class="logo_b"><img src="https://i.postimg.cc/tC33vtbq/Kakao-Talk-20201025-174827056-04.png"></a>
 
 		<ul class="nav">
 			<li><a href="word.html" class="un_click" >W </a></li>
@@ -189,7 +298,7 @@
 	<a href="ppt1.html">
 	<div class="main">
 		<div class="main_img">
-		<h3 class="main_info">파워포인트를 이용하는<br>	사람을 위한<br>꿀-단축키 소개</h3>
+		<h3 class="main_info">파워포인트를 이용하는<br>사람을 위한<br>꿀-단축키 소개</h3>
 		</div>
 	</a>
 	
