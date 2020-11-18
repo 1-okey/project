@@ -28,14 +28,14 @@
 		@font-face { font-family: 'GmarketSansMedium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');  font-weight: normal; font-style: normal; }
 		@font-face { font-family: 'GmarketSansLight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff'); font-weight: normal;  font-style: normal; }
 		/*헤더*/
-		body{ width: auto; height: 100vh;}
+		body{ width: 100vw; height: 100vh;}
 
-		header{ float: left; width: 327px; height: 100vh; background: var(--han-color); position: fixed; z-index: 100; }
+		header{ float: left; width: 15%; height: 100vh; background: var(--han-color); position: fixed; z-index: 100; }
 
-		.logo_w img{width: 120px; position:relative; margin-left: 100px; padding-top: 70px;}
+		.logo_w img{width: 100px;  padding-top: 70px; padding-left: 70px;}
 		
 
-		.line{ position:relative; height: 320px; margin-bottom: 30px; }
+		.line{ position:relative; height: 300px; margin-bottom: 30px; margin-top: 30px;}
 
 		.nav{display: flex; position:relative; justify-content: space-between; align-items: center; flex-direction: column;  }
 		.nav li{ display: flex; flex-direction: column; align-items: center; list-style:none; margin-top: 10px;}
@@ -44,29 +44,31 @@
 		.nav .un_click{font-family: 'GmarketSansLight'; font-size: 24px; color: #fff; line-height: 60px;}
 
 		/* 하부 카테고리 및 페이지 이름*/
-		.main{ position: absolute; width: 2000px; margin-left: 380px;  }
-		
-		.top .menu{ width:1400px;display: flex; justify-content: flex-start; align-items: center; }
+		.main{ position: absolute; width: 85%; margin-left: 350px;  }
+		.top .menu{display: flex; justify-content: flex-start; align-items: center;  }
 		.menu .icon{width: 60px;  margin-top: 50px; padding-right: 30px; float: left; }
 		.menu img{width: 60px;  }
 		
-		.title{display: flex; flex-wrap: wrap; margin-left: 800px; align-items: center;  }
+		.title{display: flex; flex-wrap: wrap; margin-left: 700px; align-items: center;  }
 		#icon_logo{ margin-top: 50px; width: 40px; height: 40px; margin-right: 10px; }
 		.title h2{ font-family: 'GmarketSansBold'; font-size: 26px; font-weight: bold; color: var(--han-color); line-height: 60px; text-align: center; margin-top:50px;  }
 
 		/* 내용*/
-		.container{display: flex; flex-direction: row; position: relative; position: absolute; overflow: visible; width: auto; }
-		.content{ display: flex; align-items: center; flex-direction: column; margin-right: 60px;} 
-		.hov-anim-box img{width: 380px; box-sizing: border-box; box-shadow: 0px 6px 8px #F0F0F0; border-radius: 10px; margin-top: 50px; margin-left: -15px;}
+		.container{display: flex; flex-direction: row; position: absolute; flex-wrap: wrap; width: 90%; }
+		.content{ display: flex; align-items: center; flex-direction: column; width: 350px; margin-right: 70px; margin-bottom: 40px; border-top: 1px dashed black; justify-content: space-around;}  
+		.content:first-child{border-top: none;}
+		.content:nth-child(2){border-top: none;}
+		.content:nth-child(3){border-top: none;}
+		.hov-anim-box img{width: 350px; box-sizing: border-box; box-shadow: 0px 6px 8px #F0F0F0; border-radius: 10px; margin-top: 50px;}
 		.hov-anim-box .animated{display: none; }
 		.hov-anim-box:hover .animated{display: inline; transform: scale(1.1);}
 		.hov-anim-box:hover .static{display: none; transform: scale(1.1);}
 
-		.text{display: flex; align-items: center; width: 400px;}
-		#icon_key{width: 30px; padding-top: 30px; padding-right: 10px;}
-		.keyName{font-family: 'GmarketSansBold'; font-size: 18px; color: #323232; line-height: 50px;}
-		.content h4{font-family: 'GmarketSansBold'; font-size: 20px; color: #323232; line-height: 40px;}
-		.content h5{font-family: 'GmarketSansMedium'; font-size: 16px; color: #4F4F4F; line-height: 40px;}
+		.text{display: flex; align-items: center; width: 350px; margin-top: 20px;}
+		#icon_key{width: 30px; padding-right: 10px; opacity: 0.7;}
+		.keyName{font-family: 'GmarketSansBold'; font-size: 15px; color: #666; line-height: 15px; }
+		.content h4{font-family: 'GmarketSansBold'; font-size: 20px; color: #323232; line-height: 40px; margin-top: 10px;}
+		.content h5{font-family: 'GmarketSansMedium'; font-size: 17px; color: #4F4F4F; line-height: 30px; margin-bottom: 20px;}
 	</style>
 </head>
 <body>
@@ -95,8 +97,7 @@
 				</div>
 			</div>
 		</div>
-		<section class="container">
-			<div class="content">
+		<div class="content">
 				<span class="hov-anim-box">
 				<img src="./img/han/textWide.jpg" alt="" class="static">
 				<img src="./img/han/textWide.gif" alt="" class="animated">
@@ -107,7 +108,7 @@
 					</div>
 					<h4>Alt + Shift + W </h4>
 					<h5>자간 늘리기</h5>
-					<img src="https://i.postimg.cc/GhCmc68C/board.png">
+					<img src="img/hangle/textWide_w.png" width="350px">
 				</div>
 				<div class="mac">
 					<div class="text">
@@ -115,7 +116,7 @@
 					</div>
 					<h4>command + Shift + W</h4>
 					<h5>자간 늘리기</h5>
-					<img src="https://i.postimg.cc/GhCmc68C/board.png">
+					<img src="img/hangle/textWide_m.png" width="350px">
 				</div>
 			</div>
 
@@ -130,7 +131,7 @@
 					</div>
 					<h4>Alt + Shift + N </h4>
 					<h5>자간 줄이기</h5>
-					<img src="https://i.postimg.cc/GhCmc68C/board.png">
+					<img src="img/hangle/textNarrow_w.png" width="350px">
 				</div>
 				<div class="mac">
 					<div class="text">
@@ -138,7 +139,7 @@
 					</div>
 					<h4>command + Shift + N</h4>
 					<h5>자간 줄이기</h5>
-					<img src="https://i.postimg.cc/GhCmc68C/board.png">
+					<img src="img/hangle/textNarrow_m.png" width="350px">
 				</div>
 			</div>
 			
@@ -153,15 +154,15 @@
 					</div>
 					<h4>Alt + Shift + Z </h4>
 					<h5>줄 간격 늘리기</h5>
-					<img src="https://i.postimg.cc/GhCmc68C/board.png">
+					<img src="img/hangle/lineWide_w.png" width="350px">
 				</div>
 				<div class="mac">
 					<div class="text">
 						<h3 class="keyName"><img src="https://i.postimg.cc/L636hvLZ/key.png" id="icon_key">Mac</h3>
 					</div>
-					<h4>command + Shift + Z </h4>
+					<h4>control + Shift + W </h4>
 					<h5>줄 간격 늘리기</h5>
-					<img src="https://i.postimg.cc/GhCmc68C/board.png">
+					<img src="img/hangle/lineWide_m.png" width="350px">
 				</div>
 			</div>
 
@@ -176,15 +177,15 @@
 					</div>
 					<h4>Alt + Shift + A </h4>
 					<h5>줄 간격 줄이기</h5>
-					<img src="https://i.postimg.cc/GhCmc68C/board.png">
+					<img src="img/hangle/lineNarrow_w.png" width="350px">
 				</div>
 				<div class="mac">
 					<div class="text">
 						<h3 class="keyName"><img src="https://i.postimg.cc/L636hvLZ/key.png" id="icon_key">Mac</h3>
 					</div>
-					<h4>command + Shift + A </h4>
+					<h4>cotrol + Shift + Q </h4>
 					<h5>줄 간격 줄이기</h5>
-					<img src="https://i.postimg.cc/GhCmc68C/board.png">
+					<img src="img/hangle/lineNarrow_m.png" width="350px">
 				</div>
 			</div>
 
@@ -197,17 +198,17 @@
 					<div class="text">
 						<h3 class="keyName"><img src="https://i.postimg.cc/L636hvLZ/key.png" id="icon_key">Window</h3>
 					</div>
-					<h4>F3 + F3 + F3 </h4>
+					<h4>F3, 3번 </h4>
 					<h5>한 문단 블록</h5>
-					<img src="https://i.postimg.cc/GhCmc68C/board.png">
+					<img src="img/hangle/1block_w.png" width="350px">
 				</div>
 				<div class="mac">
 					<div class="text">
 						<h3 class="keyName"><img src="https://i.postimg.cc/L636hvLZ/key.png" id="icon_key">Mac</h3>
 					</div>
-					<h4>F3 + F3 + F3 </h4>
+					<h4>fn + F3, 3번 </h4>
 					<h5>한 문단 블록</h5>
-					<img src="https://i.postimg.cc/GhCmc68C/board.png">
+					<img src="img/hangle/1block_m.png" width="350px">
 				</div>
 			</div>
 			
@@ -220,17 +221,17 @@
 					<div class="text">
 						<h3 class="keyName"><img src="https://i.postimg.cc/L636hvLZ/key.png" id="icon_key">Window</h3>
 					</div>
-					<h4>Alt + Alt + Alt + Alt</h4>
+					<h4>F3, 4번</h4>
 					<h5>문서 전체 블록</h5>
-					<img src="https://i.postimg.cc/GhCmc68C/board.png">
+					<img src="img/hangle/allblock_w.png" width="350px">
 				</div>
 				<div class="mac">
 					<div class="text">
 						<h3 class="keyName"><img src="https://i.postimg.cc/L636hvLZ/key.png" id="icon_key">Mac</h3>
 					</div>
-					<h4>control + control + control + control</h4>
+					<h4>fn + F3, 4번</h4>
 					<h5>문서 전체 블록</h5>
-					<img src="https://i.postimg.cc/GhCmc68C/board.png">
+					<img src="img/hangle/allblock_m.png" width="350px">
 				</div>
 			</div>
 
@@ -245,17 +246,18 @@
 					</div>
 					<h4>Ctrl + Enter</h4>
 					<h5>페이지 나누기</h5>
-					<img src="https://i.postimg.cc/GhCmc68C/board.png">
+					<img src="img/hangle/divide_w.png" width="350px">
 				</div>
 				<div class="mac">
 					<div class="text">
 						<h3 class="keyName"><img src="https://i.postimg.cc/L636hvLZ/key.png" id="icon_key">Mac</h3>
 					</div>
-					<h4>command + Enter</h4>
+					<h4>control + Enter</h4>
 					<h5>페이지 나누기</h5>
-					<img src="https://i.postimg.cc/GhCmc68C/board.png">
+					<img src="img/hangle/divide_m.png" width="350px">
 				</div>
 			</div>
+			
 		</section>
 	</div>
 	
