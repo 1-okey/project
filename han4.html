@@ -28,8 +28,8 @@
 		@font-face { font-family: 'GmarketSansMedium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');  font-weight: normal; font-style: normal; }
 		@font-face { font-family: 'GmarketSansLight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff'); font-weight: normal;  font-style: normal; }
 		/*헤더*/
-		body{ width: 100vw; height: 100vh;}
-
+		body{ width: 100vw; height: 100%;}
+		
 		header{ float: left; width: 15%; height: 100vh; background: var(--han-color); position: fixed; z-index: 100; }
 
 		.logo_w img{width: 100px;  padding-top: 70px; padding-left: 70px;}
@@ -54,7 +54,7 @@
 		.title h2{ font-family: 'GmarketSansBold'; font-size: 26px; font-weight: bold; color: var(--han-color); line-height: 60px; text-align: center; margin-top:50px;  }
 
 		/* 내용*/
-		.container{display: flex; flex-direction: row; position: absolute; flex-wrap: wrap; width: 90%; }
+		.container{display: flex; flex-direction: row; position: absolute; flex-wrap: wrap; width: 90%; min-height: 100%; }
 		.content{ display: flex; align-items: center; flex-direction: column; width: 350px; margin-right: 70px; margin-bottom: 40px; border-top: 1px dashed black; justify-content: space-around;}  
 		.content:first-child{border-top: none;}
 		.content:nth-child(2){border-top: none;}
@@ -69,9 +69,46 @@
 		.keyName{font-family: 'GmarketSansBold'; font-size: 15px; color: #666; line-height: 15px; }
 		.content h4{font-family: 'GmarketSansBold'; font-size: 20px; color: #323232; line-height: 40px; margin-top: 10px;}
 		.content h5{font-family: 'GmarketSansMedium'; font-size: 17px; color: #4F4F4F; line-height: 30px; margin-bottom: 20px;}
+
+
+		/*스크롤 마우스*/
+		.mouse{ width : 100%; height: 100vh; display: flex; justify-content: center; align-items: center; box-sizing: border-box; margin-left: 430px; margin-top:150px; position: fixed;}
+		.mousey{  display: flex; justify-content: center;  align-items: center; width:40px; height: 70px; border: 3px #888 solid; border-radius: 40px; animation: mouse 2s infinite 0.2s; }
+
+		.scroller{ width: 6px; height:18px; background-color: #888;  border-radius: 3px;  animation: scroll 1.5s infinite ; }
+
+		@keyframes mouse{
+		  0%{
+		    border: 3px #888 solid;
+		  }
+		  
+		  50%{
+		    border: 3px #888 solid;
+		  }
+		  100%{
+		    border: 3px #888 solid;
+		  } 
+		}
+
+		@keyframes scroll{
+		  0%{
+		    opacity: 0;
+		  }
+		  
+		 60%{
+		    opacity: 1;
+		    transform: translate(0px,20px);
+		   
+		  }
+		  100%{
+		    opacity: 0;
+		    transform: translate(0px,20px);
+		  } 
+		}
 	</style>
 </head>
 <body>
+	
 	<header>
 		<a href="index.html" class="logo_w"><img src="https://i.postimg.cc/52fwhY9w/Kakao-Talk-20201025-174827056-05.png"></a>
 
@@ -99,6 +136,7 @@
 		</div>
 		<section class="container">
 		<div class="content">
+			
 				<span class="hov-anim-box">
 				<img src="./img/hangle/textWide.jpg" alt="" class="static">
 				<img src="./img/hangle/textWide.gif" alt="" class="animated">
@@ -260,7 +298,12 @@
 			</div>
 			
 		</section>
+		<div class="mouse">
+			<div class="mousey">
+				<div class="scroller"></div>
+			</div>
+		</div>
 	</div>
-	
+
 </body>
 </html>
