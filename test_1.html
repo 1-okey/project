@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<mata charset="UTF-8">
+	<title>1OKEY: 단축키 마스터</title>
+	<meta name="viewport" content= "width=device-width, initial-scale=1.0"/>
+
+		<style>
+		/*기본 설정*/
+		:root {
+			--word-color:#1E438F;
+			--excel-color:#387A47;
+			--ppt-color:#C45A3B;
+			--han-color:#4A9CD9;
+			--nav-color:#787878;}
+
+		/*폰트 설정*/
+		@font-face {font-family: 'GmarketSansBold';  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff'); font-weight: normal; font-style: normal;}
+		@font-face {font-family: 'GmarketSansMedium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');  font-weight: normal; font-style: normal; }
+		@font-face {font-family: 'GmarketSansLight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff'); font-weight: normal;  font-style: normal; }
+		@font-face { font-family: 'BCcardB';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.1/BCcardB.woff') format('woff');font-weight: normal; font-style: normal}
+
+		/*기본 설정: 페이지 전체*/
+		body{
+			margin: 0;
+			height: 100vh;
+			width: 100vW;}
+
+		/*헤더*/
+		header{
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;}
+
+			@media (min-width: 768px) {
+				header{
+					float: left;
+					max-width: 15%;
+
+					margin-left: auto;
+					margin-right: auto;
+
+					background-color: #4A9CD9;
+					background-color:var(--han-color);}
+			}
+
+		.logo{margin-top: 5vh;}
+
+		.logo img{
+			padding-top: 10px;
+			width: 100px;}
+
+		.menu{margin-top: 5vh;}
+
+		.menu ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;}
+
+		.menu a{
+			float: right;
+			display: block;
+			color: #1E438F;
+			text-decoration: none;
+			font-family: 'GmarketSansBold';}
+
+		.menu .click{
+			margin-top: 2vh;
+			font-family: 'GmarketSansBold';
+			font-size: 30px;
+			font-weight: bold;
+			color: #fff;
+			line-height: 60px;}
+		.menu .click:hover{
+			text-decoration: underline;
+			text-underline-position: under;
+			transition: all 0.5s ease-in;}				
+		.menu .un_click{
+			margin-top: 2vh;
+			font-family: 'GmarketSansLight';
+			font-size: 24px;
+			color: #fff;
+			line-height: 60px;}
+		.menu .un_click:hover{font-size:30px;}
+
+		@media (min-width: 768px) {
+			header .container{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-direction: column;
+				max-width: 75%;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 20px;}
+
+			header .menu{
+				margin-top: 10px;}
+
+			header .program{
+			max-width: 75%;}
+		}
+
+		.line{
+			position:relative;
+			height: 300px;
+			margin-top: 5vh;}
+
+		.main{
+			padding-top: 50px;
+		}
+
+		.main .container{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.li_icon .icon img{
+			width: 60px;
+			height: 60px;
+			margin-right: 20px;
+		}
+
+		.title img{
+			width: 40px;
+			height: 40px;}
+
+		.title h2{
+			margin-left: 10px;
+			font-family: 'GmarketSansBold';
+			font-size: 26px;
+			font-weight: bold;
+			color: var(--han-color);
+			color: #4A9CD9;}
+
+		.title{
+			display: flex;
+			align-items: center;}
+
+			@media (min-width: 768px) {
+				.main .container{
+					max-width: 80%;
+					margin-left: auto;
+					margin-right: auto;}
+			}
+
+				/*푸터*/
+		footer{
+			color:#444444;
+			background-color: #EAEAEA;
+			text-align: center;}
+		footer .container{
+			align-items: center;}
+		.foot h2{
+			display: block;
+			margin-top: 0;
+			margin-bottom: 0;
+			font-size: 15px;
+			font-family: "Noto Sans KR";
+			letter-spacing: 0.2em;
+			font-weight: 400;
+			padding: 5px 0px;}
+		.foot p{
+			display: block;
+			margin-top: 0;
+			margin-bottom: 0;
+			font-size: 14px;
+			font-family: "Noto Sans KR";
+			font-weight: 300;
+			padding: 5px 0px;}
+		.foot a{
+			font-family: "Noto Sans KR";
+			font-size: 15px;
+			font-weight: 400;
+			color:#444444;
+			text-decoration: none;
+			display: block;
+			margin-top: 0;
+			margin-bottom: 0;
+			font-size: 15px;
+			padding: 5px 0px;}
+		.foot a:hover{
+			color: #1E438F;
+			font-weight: 500;
+			font-size: 15px;}
+
+		@media (min-width: 768px) {
+			footer .container{
+				max-width: 100%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<a href="word.html" class="logo"><img src="https://i.postimg.cc/52fwhY9w/Kakao-Talk-20201025-174827056-05.png"></a>
+			<hr class="line"></hr>
+			<nav class="menu">
+				<ul>
+					<li><a href="word.html" class="un_click" >W</a></li>
+					<li><a href="excel.html" class="un_click" >E</a></li>
+					<li><a href="ppt.html" class="un_click" >P</a></li>
+					<li><a href="han.html" class="click" >H</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="main">
+		<div class="container">
+			<div class="li_icon">
+				<a href="han1.html" class="icon"><img src="./img/1_icon_han_blue1.png" ></a>
+				<a href="han2.html" class="icon"><img src="./img/icon_han_2.png" ></a>
+				<a href="han3.html" class="icon"><img src="./img/icon_han_3.png" ></a>
+				<a href="han4.html" class="icon"><img src="./img/icon_han_4.png" ></a>
+			</div>
+			<div class="title">
+					<img src="./img/icon_han.png">
+					<h2>Hancom</h2>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="foot">
+			<h2>본 사이트는 한국산업기술대학교 디자인학부 프로젝트의 결과물이며, 2020년 이후 사용이 불가합니다.<br>사이트와 관련하여 디자인과 기능에 관한 의견을 보내주시면 저희 프로젝트에 굉장히 큰 도움이 됩니다 :)</h2>
+			<a href="mailto:1-okey@naver.com">1-okey@naver.com</a>
+			<p>Copyright 2020. 1OKEY PROJECT. All rights reserved</p>
+		</div>
+		</div>
+	</footer>
+</body>
+</html>
